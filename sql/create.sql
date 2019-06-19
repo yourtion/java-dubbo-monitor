@@ -4,8 +4,7 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `dubbo_invoke`;
 CREATE TABLE `dubbo_invoke`
 (
-    `nid`            int(11) unsigned NOT NULL AUTO_INCREMENT,
-    `id`             varchar(255)     NOT NULL DEFAULT '',
+    `id`            int(11) unsigned NOT NULL AUTO_INCREMENT,
     `invoke_date`    date             NOT NULL,
     `service`        varchar(255)              DEFAULT NULL,
     `method`         varchar(255)              DEFAULT NULL,
@@ -19,7 +18,7 @@ CREATE TABLE `dubbo_invoke`
     `concurrent`     int(11) unsigned          DEFAULT NULL,
     `max_elapsed`    int(11) unsigned          DEFAULT NULL,
     `max_concurrent` int(11) unsigned          DEFAULT NULL,
-    PRIMARY KEY (`nid`),
+    PRIMARY KEY (`id`),
     KEY `index_service` (`service`) USING BTREE,
     KEY `index_method` (`method`) USING BTREE,
     KEY `idx_date_type` (`invoke_date`, `type`) USING BTREE

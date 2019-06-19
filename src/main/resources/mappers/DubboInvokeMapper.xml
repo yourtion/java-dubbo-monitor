@@ -44,7 +44,6 @@
         <include refid="allNoAsOfDubboInvoke" />
         )
         values(
-        #{id},
         #{invokeDate},
         #{service},
         #{method},

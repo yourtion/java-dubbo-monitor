@@ -25,7 +25,6 @@ import com.alibaba.dubbo.monitor.MonitorService;
 import com.google.common.collect.Maps;
 import com.handu.open.dubbo.monitor.domain.DubboInvoke;
 import com.handu.open.dubbo.monitor.support.Dao;
-import com.handu.open.dubbo.monitor.support.UuidUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 
@@ -111,7 +110,6 @@ public class DubboMonitorService implements MonitorService {
         }
         DubboInvoke dubboInvoke = new DubboInvoke();
 
-        dubboInvoke.setId(UuidUtil.createUUID());
         try {
             if (statistics.hasParameter(PROVIDER)) {
                 dubboInvoke.setType(CONSUMER);
