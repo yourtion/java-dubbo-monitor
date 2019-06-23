@@ -33,8 +33,8 @@ function loadChartsData() {
     $.ajax({
         type: "POST", url: "services/charts/loadChartsData", dataType: "json", data: {
             "service": $('#invokeSearchService').val(),
-            "invokeDateFrom": new Date($('#invokeDateFrom').val().replace(new RegExp("-","gm"),"/") + ' 00:00:00'),
-            "invokeDateTo": new Date($('#invokeDateTo').val().replace(new RegExp("-","gm"),"/") + ' 23:59:59')
+            "invokeDateFrom": moment($('#invokeDateFrom').val()).hours(0).minutes(0).seconds(0).toDate(),
+            "invokeDateTo": moment($('#invokeDateTo').val()).hours(23).minutes(59).seconds(59).toDate(),
         }, error: function (req, status, err) {
             alert('Failed reason: ' + err);
         }, success: function (data) {
