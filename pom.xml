@@ -27,7 +27,7 @@
         <mysql.version>8.0.13</mysql.version>
         <druid.version>1.1.12</druid.version>
         <jackson.version>2.10.0.pr1</jackson.version>
-        <junit.version>4.11</junit.version>
+        <junit.version>4.13.1</junit.version>
         <guava.version>16.0.1</guava.version>
     </properties>
 
